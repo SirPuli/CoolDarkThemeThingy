@@ -7,7 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themes", "Themes\Themes.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CE0FCEE9-0B4D-41B8-ABD0-530CF859C758}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\Downloads\latestPreview.png = ..\..\..\Downloads\latestPreview.png
 		readme.md = readme.md
 	EndProjectSection
 EndProject
