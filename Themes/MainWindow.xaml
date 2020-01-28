@@ -86,77 +86,13 @@
     </Window.DataContext>
     <Grid>
         <Menu VerticalAlignment="Top">
-            <MenuItem Header="sosos">
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}">
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
+            <MenuItem Header="File">
+                <MenuItem Header="Save" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                <MenuItem Header="Save as..." Template="{DynamicResource DropDownMenuItemTemplate}">
+                    <MenuItem Header="Text File (txt)" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                    <MenuItem Header="XML (xml)" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                    <MenuItem Header="C# File (cs)" Template="{DynamicResource DropDownMenuItemTemplate}"/>
                 </MenuItem>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-            </MenuItem>
-            <MenuItem Header="sosos">
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}">
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                </MenuItem>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-            </MenuItem>
-            <MenuItem Header="sosos">
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}">
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                    <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                </MenuItem>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
-                <MenuItem Header="ososos" Template="{DynamicResource bbbb}"/>
             </MenuItem>
         </Menu>
         <GroupBox Header="Theme" HorizontalAlignment="Left" Height="84" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="236">

@@ -1817,7 +1817,7 @@
     </Style>
 
 
-    <ControlTemplate x:Key="bbbb" TargetType="{x:Type MenuItem}">
+    <ControlTemplate x:Key="DropDownMenuItemTemplate" TargetType="{x:Type MenuItem}">
         <Border x:Name="templateRoot" 
                         BorderBrush="{StaticResource ControlDefaultBorderBrush}" 
                         BorderThickness="0" 
