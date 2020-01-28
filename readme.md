@@ -27,3 +27,4 @@ this is the code for making a fully themed menu:
     </MenuItem>
 </Menu>
 ```
+Also, if you absolutely need my consent to do stuff like edit/use this theme stuff, then you can edit this and publish this all you want :) would be nice if you credited me at this github link, but eh.
