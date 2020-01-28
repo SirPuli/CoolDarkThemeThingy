@@ -8,38 +8,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280" Style="{DynamicResource MainWindowStyle}" FontSize="16">
     <Window.Resources>
-        <Style TargetType="{x:Type CheckBox}">
-            <Setter Property="MinHeight" Value="28"/>
+        <Style TargetType="{x:Type RadioButton}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-            <Setter Property="Background" Value="{StaticResource ControlDefaultBackground}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}"/>
-            <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}"/>
+            <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="MinHeight" Value="20"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type CheckBox}">
-                        <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True" Margin="0">
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" MinWidth="16"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Border x:Name="checkBoxBorder" 
+                            <Border x:Name="radioButtonBorder" 
                                 BorderBrush="{TemplateBinding BorderBrush}" 
                                 BorderThickness="{TemplateBinding BorderThickness}" 
-                                Background="{TemplateBinding Background}" 
-                                HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" Height="20" Width="20" Margin="0,4">
-                                <Grid x:Name="markGrid">
-                                    <Path x:Name="optionMark" 
-                                        Data="F1 M 9.97498,1.22334L 4.6983,9.09834L 4.52164,9.09834L 0,5.19331L 1.27664,3.52165L 4.255,6.08833L 8.33331,1.52588e-005L 9.97498,1.22334 Z " 
-                                        Fill="{StaticResource OptionMark.Static.Glyph}" Margin="1" Opacity="0" Stretch="None"
-                                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    <Rectangle x:Name="indeterminateMark" Fill="{StaticResource OptionMark.Static.Glyph}" Margin="2" Opacity="0"/>
+                                Background="{TemplateBinding Background}" CornerRadius="3" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                Height="16" Width="16">
+                                <Grid x:Name="markGrid" Margin="2">
+                                    <Ellipse x:Name="optionMark" Fill="{StaticResource RadioButton.Static.Glyph}" MinWidth="6" MinHeight="6" Opacity="0"/>
                                 </Grid>
                             </Border>
                             <ContentPresenter x:Name="contentPresenter" 
-                                Grid.Column="1" Focusable="False" 
-                                HorizontalAlignment="Stretch" Margin="4,3,3,3" RecognizesAccessKey="True" 
+                                Grid.Column="1" Focusable="False"
+                                HorizontalAlignment="Center" Margin="4,3" RecognizesAccessKey="True" 
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
                                 VerticalAlignment="Center" Height="22"/>
                         </Grid>
@@ -49,30 +45,25 @@
                                 <Setter Property="Padding" Value="4,-1,0,0"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.MouseOver.Border}"/>
-                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.MouseOver.Glyph}"/>
-                                <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.MouseOver.Glyph}"/>
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.MouseOver.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Disabled.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Disabled.Border}"/>
-                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.Disabled.Glyph}"/>
-                                <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.Disabled.Glyph}"/>
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Disabled.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.Disabled.Glyph}"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Pressed.Border}"/>
-                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.Pressed.Glyph}"/>
-                                <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.Pressed.Glyph}"/>
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Pressed.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.Pressed.Glyph}"/>
                             </Trigger>
                             <Trigger Property="IsChecked" Value="true">
                                 <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
-                                <Setter Property="Opacity" TargetName="indeterminateMark" Value="0"/>
                             </Trigger>
                             <Trigger Property="IsChecked" Value="{x:Null}">
-                                <Setter Property="Opacity" TargetName="optionMark" Value="0"/>
-                                <Setter Property="Opacity" TargetName="indeterminateMark" Value="1"/>
+                                <Setter Property="Opacity" TargetName="optionMark" Value="0.56"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -94,6 +85,17 @@
                     <MenuItem Header="C# File (cs)" Template="{DynamicResource DropDownMenuItemTemplate}"/>
                 </MenuItem>
             </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="1" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                <MenuItem Header="2" Template="{DynamicResource DropDownMenuItemTemplate}">
+                    <MenuItem Header="21" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                    <MenuItem Header="22" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                    <MenuItem Header="23" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Other things here">
+                <MenuItem Header="eeeeeeeeeeee" Template="{DynamicResource DropDownMenuItemTemplate}"/>
+            </MenuItem>
         </Menu>
         <GroupBox Header="Theme" HorizontalAlignment="Left" Height="84" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="236">
             <ComboBox SelectedIndex="{Binding ThemeIndex, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" FontSize="16" Margin="5,10,5,0">
@@ -112,6 +114,12 @@
                     <Button Content="Button 2" Margin="10,0,2,0" VerticalAlignment="Bottom" Height="60" FontSize="16"/>
                     <Button Content="Button 3" Margin="2,0,10,0" VerticalAlignment="Bottom" Height="60" Grid.Column="1" FontSize="16"/>
                 </Grid>
+                <ProgressBar Value="45" Height="24" Margin="10,140,10,0" VerticalAlignment="Top"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Height="9"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Height="9"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Height="9"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top" Height="9"/>
+                <RadioButton Content="A radio button here" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Height="9"/>
             </Grid>
         </GroupBox>
         <GroupBox Margin="251,23,10,10" Header="Yr a noooooooooooe">
@@ -152,6 +160,13 @@
                             <ListBoxItem Content="A ListBoxItem Here"/>
                             <ListBoxItem Content="A ListBoxItem Here"/>
                             <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
+                            <ListBoxItem Content="A ListBoxItem Here"/>
                         </ListBox>
                     </Grid>
                 </GroupBox>
@@ -161,24 +176,46 @@
                         <TabControl Margin="10" BorderBrush="{DynamicResource ControlDefaultBackground}" Background="{DynamicResource ControlDefaultBackground}">
                             <TabItem Header="TabItem">
                                 <Grid Background="{DynamicResource ControlDefaultBackground}">
-                                    <StackPanel Orientation="Vertical">
-                                        <TextBlock Text="Slidersssss"/>
-                                        <Slider/>
-                                        <TextBlock Text="Slidersssss"/>
-                                        <Slider/>
-                                        <TextBlock Text="Slidersssss"/>
-                                        <Slider/>
-                                        <TextBlock Text="Slidersssss"/>
-                                        <Slider/>
-                                        <TextBlock Text="Slidersssss"/>
-                                        <Slider/>
-                                        <TextBlock Text="Slidersssss"/>
-                                        <Slider/>
-                                        <TextBlock Text="Slidersssss"/>
-                                        <Slider/>
-                                        <TextBlock Text="Slidersssss"/>
-                                        <Slider/>
-                                    </StackPanel>
+                                    <ScrollViewer>
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                            <TextBlock Text="Slidersssss" Margin="2"/>
+                                            <Slider Margin="2"/>
+                                            <Separator Margin="3"/>
+                                        </StackPanel>
+                                    </ScrollViewer>
                                 </Grid>
                             </TabItem>
                             <TabItem Header="TabItem">
