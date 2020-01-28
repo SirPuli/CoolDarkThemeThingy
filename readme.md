@@ -12,7 +12,7 @@ i started making this maybe a few weeks ago. just drag and drop the DarkTheme.xa
 ```
 and thats about it. Enjoy :)
 # Errors and 'todo' stuff
-I dont entirely like the colour of the sliders. blue's okay, but it's normally used for light theme cases. i messed up the colour of the background with the slider too. Background does **absolutely** nothing (i think). Border is technically the background, and foreground is the slider-ery bit (the blue bit atm).
+I dont entirely like the look of the sliders. blue's okay, but it's normally used for light theme cases. i messed up the colour of the background with the slider too. Background does **absolutely** nothing (i think). Border is technically the background, and foreground is the slider-ery bit (the blue bit atm).
 
 An error if you add a "Light/Dark" option thingy, and use Menus/MenuItems; in the test program thing, selecting the light theme just unloads DarkTheme.xaml, which makes WPF style everything to their default styles. But because i said that MenuItems need to have a special template, well WPF will try to look for that template and wont find it. As a result, the MenuItems will all turn into tiny squares because WPF has nothing to style them with. idk how to fix that unfortunately. rip.
 # Some things about the MenuItems
