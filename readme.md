@@ -10,6 +10,7 @@ i started making this maybe a few weeks ago. just drag and drop the DarkTheme.xa
 </Application.Resources>
 
 ```
+Also, i added some stuff used for MVVM for some reason. I only really used it for the light/dark combobox at the bottom left of the screen.
 and thats about it. Enjoy :)
 # Errors and 'todo' stuff
 I dont entirely like the look of the sliders. blue's okay, but it's normally used for light theme cases. i messed up the colour of the background with the slider too. Background does **absolutely** nothing (i think). Border is technically the background, and foreground is the slider-ery bit (the blue bit atm).
