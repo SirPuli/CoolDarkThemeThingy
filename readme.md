@@ -38,5 +38,27 @@ public ICommand NewTabCommand { get; set; }
 public ICommand CloseTabCommand { get; set; }
 ```
 You can change these in the DarkTheme.xaml file. These commands automatically bind when the datacontext is set. How you setup clicking Add or Close to do something is up to you.
+For giving tabcontrols/tabitems the add/close buttons, use these templates:
+```
+Template="{DynamicResource CloseButtons}" 
+Template="{DynamicResource AddButtons}"
+```
+use the CloseButtons on TabItems, and the AddButtons template on the TabControl
+Use this code for a normal tabcontrol with tabitems:
+```xml
+<TabControl>
+    <TabItem Header="A TabItem Here">
+        <Grid/>
+    </TabItem>
+</TabControl>
+```
+and for using add/close buttons, use this:
+```xml
+<TabControl Template="{DynamicResource AddButtons}">
+    <TabItem Header="A TabItem Here" Template="{DynamicResource CloseButtons}">
+        <Grid/>
+    </TabItem>
+</TabControl>
+```
 ## Other things 
 Also, if you absolutely need my consent to do stuff like edit/use this theme stuff, then you can edit this and publish this all you want :) would be nice if you credited me at this github link, but eh.
